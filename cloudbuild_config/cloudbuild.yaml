@@ -12,10 +12,10 @@ steps:
     - 'push'
     - 'gcr.io/$PROJECT_ID/wordpress:$COMMIT_SHA'
 - name: 'gcr.io/cloud-builders/kubectl'
-    args:
-      - 'apply'
-      - '-f'
-      - 'k8s/wordpress-cloudsql-deploy.yaml'
-    env:
-      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=wordpress-cluster'
+  args:
+    - 'apply'
+    - '-f'
+    - 'k8s/wordpress-cloudsql-deploy.yaml'
+  env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=wordpress-cluster'
