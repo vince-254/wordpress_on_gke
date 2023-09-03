@@ -7,7 +7,6 @@ steps:
     - '-f'
     - '/latest/php8.2/apache/Dockerfile'  # Replace with the actual path to your Dockerfile
     - '.'
-    
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/wordpress:$COMMIT_SHA']
   - name: 'gcr.io/cloud-builders/kubectl'
