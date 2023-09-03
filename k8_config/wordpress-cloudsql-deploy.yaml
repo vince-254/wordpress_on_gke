@@ -56,10 +56,10 @@ spec:
       #       - name: cloudsql-instance-credentials
       #         mountPath: /secrets/cloudsql
       #         readOnly: true
-      # volumes:
-      #   - name: wordpress-persistent-storage
-      #     persistentVolumeClaim:
-      #       claimName: wordpress-volumeclaim
+      volumes:
+        - name: wordpress-persistent-storage
+          persistentVolumeClaim:
+            claimName: wordpress-volumeclaim
       #   - name: cloudsql-instance-credentials
       #     secret:
       #       secretName: cloudsql-instance-credentials
