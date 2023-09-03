@@ -14,7 +14,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=wordpress-cloudsql-deploy.yaml
+  - --filename=k8_config/wordpress-cloudsql-deploy.yaml
   - --image=gcr.io/project-id/wordpress:$COMMIT_SHA
   - --location=$LOCATION
   - --cluster=wordpress-cluster
