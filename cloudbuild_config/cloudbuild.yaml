@@ -18,5 +18,6 @@ steps:
     - 'k8_config/wordpress-cloudsql-deploy.yaml'
   env:
     - 'PROJECT_ID=$PROJECT_ID'
+    - 'COMMIT_SHA=$COMMIT_SHA'
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
     - 'CLOUDSDK_CONTAINER_CLUSTER=wordpress-cluster'
