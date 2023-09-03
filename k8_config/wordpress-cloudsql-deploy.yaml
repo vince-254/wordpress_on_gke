@@ -15,13 +15,9 @@ spec:
         app: wordpress
     spec:
       containers:
-        - image: gcr.io/PROJECT_ID/wordpress:COMMIT_SHA
+        - image: gcr.io/$PROJECT_ID/wordpress:$COMMIT_SHA
           name: wordpress
           env:
-          - name: PROJECT_ID
-            value: "$PROJECT_ID"
-          - name: COMMIT_SHA
-            value: "$COMMIT_SHA"
           - name: WORDPRESS_DB_HOST
             value: 34.173.199.10:3306
           # These secrets are required to start the pod.
