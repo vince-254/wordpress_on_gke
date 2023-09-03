@@ -15,7 +15,7 @@ spec:
         app: wordpress
     spec:
       containers:
-        - image: gcr.io/${PROJECT_ID}/wordpress:${COMMIT_SHA}
+        - image: gcr.io/candidate-test-env/wordpress:latest
           name: wordpress
           env:
           - name: WORDPRESS_DB_HOST

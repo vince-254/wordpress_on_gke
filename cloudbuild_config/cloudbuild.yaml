@@ -15,7 +15,7 @@ steps:
   args:
   - run
   - --filename=k8_config/wordpress-cloudsql-deploy.yaml
-  - --image=gcr.io/project-id/wordpress:$COMMIT_SHA
+  - --image=gcr.io/$PROJECT_ID/wordpress:$COMMIT_SHA
   - --location=$LOCATION
   - --cluster=wordpress-cluster
   env:
