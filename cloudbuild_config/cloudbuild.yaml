@@ -16,7 +16,7 @@ steps:
   - run
   - --filename=wordpress-cloudsql-deploy.yaml
   - --image=gcr.io/project-id/wordpress:$COMMIT_SHA
-  - --location=location
+  - --location=$LOCATION
   - --cluster=wordpress-cluster
   env:
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
+    - 'LOCATION=us-central1'
